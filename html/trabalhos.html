@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meus Trabalhos - Escola Paraná Pro</title>
+
+  <!-- Fonte e ícones -->
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./../css/trabalhos.css" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- Top App Bar -->
+    <header class="top-bar">
+      <div class="icon"><span class="material-symbols-outlined">menu</span></div>
+      <h1>Meus Trabalhos</h1>
+      <button class="notification-btn">
+        <span class="material-symbols-outlined">notifications</span>
+      </button>
+    </header>
+
+    <!-- Tabs -->
+    <nav class="tabs">
+      <a href="#" class="tab active">Pendentes</a>
+      <a href="#" class="tab">Entregues</a>
+    </nav>
+
+    <!-- Lista de trabalhos -->
+    <main class="content">
+      <div class="card">
+        <div class="card-icon blue"><span class="material-symbols-outlined">calculate</span></div>
+        <div class="card-info">
+          <p class="card-title">Matemática</p>
+          <p class="card-sub">Entrega até 25/10/2023 - Individual</p>
+          <p class="card-desc">Resumo sobre Teorema de Pitágoras</p>
+        </div>
+        <button class="btn-link">Ver Detalhes</button>
+      </div>
+
+      <div class="card">
+        <div class="card-icon yellow"><span class="material-symbols-outlined">auto_stories</span></div>
+        <div class="card-info">
+          <p class="card-title">História</p>
+          <p class="card-sub">Entrega até 28/10/2023 - Em Grupo</p>
+          <p class="card-desc">A Revolução Industrial</p>
+        </div>
+        <button class="btn-link">Ver Detalhes</button>
+      </div>
+
+      <div class="card">
+        <div class="card-icon red"><span class="material-symbols-outlined">menu_book</span></div>
+        <div class="card-info">
+          <p class="card-title">Português</p>
+          <p class="card-sub">Entrega até 30/10/2023 - Individual</p>
+          <p class="card-desc">Análise do livro "Dom Casmurro"</p>
+        </div>
+        <button class="btn-link">Ver Detalhes</button>
+      </div>
+    </main>
+
+    <!-- Barra inferior -->
+    <footer class="bottom-nav">
+      <a href="#"><span class="material-symbols-outlined">schedule</span><span>Horários</span></a>
+      <a href="#" class="active"><span class="material-symbols-outlined">assignment</span><span>Trabalhos</span></a>
+      <a href="#"><span class="material-symbols-outlined">school</span><span>Notas</span></a>
+      <a href="#"><span class="material-symbols-outlined">chat</span><span>Mensagens</span></a>
+    </footer>
+  </div>
+
+  <script src="./../js/trabalhos.js"></script>
+</body>
+</html>

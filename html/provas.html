@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minhas Provas - Escola Paraná Pro</title>
+
+  <!-- Fontes e ícones -->
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="./../css/provas.css" />
+
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="icon">
+        <span class="material-symbols-outlined">menu</span>
+      </div>
+      <h2>Minhas Provas</h2>
+      <button class="filter-btn">
+        <span class="material-symbols-outlined">filter_list</span>
+      </button>
+    </header>
+
+    <div class="tabs">
+      <label class="tab">
+        <input type="radio" name="tab" checked onchange="showSection('proximas')">
+        <span>Próximas</span>
+      </label>
+      <label class="tab">
+        <input type="radio" name="tab" onchange="showSection('realizadas')">
+        <span>Realizadas</span>
+      </label>
+    </div>
+
+    <main id="proximas-section" class="section">
+      <div class="exam-card">
+        <div class="exam-icon">
+          <span class="material-symbols-outlined">calendar_today</span>
+        </div>
+        <div class="exam-info">
+          <p class="exam-title">Matemática</p>
+          <p class="exam-desc">Funções de 2º grau e Teorema de Pitágoras</p>
+        </div>
+        <div class="exam-meta">
+          <p class="exam-date">25 OUT</p>
+          <button class="exam-action">
+            <span class="material-symbols-outlined">add_alarm</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="exam-card">
+        <div class="exam-icon">
+          <span class="material-symbols-outlined">calendar_today</span>
+        </div>
+        <div class="exam-info">
+          <p class="exam-title">História</p>
+          <p class="exam-desc">Revolução Francesa - Capítulos 5 e 6</p>
+        </div>
+        <div class="exam-meta">
+          <p class="exam-date">28 OUT</p>
+          <button class="exam-action">
+            <span class="material-symbols-outlined">add_alarm</span>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <main id="realizadas-section" class="section hidden">
+      <div class="exam-card">
+        <div class="exam-info">
+          <p class="exam-title">Química</p>
+          <p class="exam-desc">Tabela Periódica e Ligações Químicas</p>
+          <p class="exam-sub">Realizada em 15/09</p>
+        </div>
+        <div class="exam-grade">
+          <p class="exam-grade-label">Nota</p>
+          <p class="exam-grade-value success">8.5</p>
+        </div>
+      </div>
+
+      <div class="exam-card">
+        <div class="exam-info">
+          <p class="exam-title">Geografia</p>
+          <p class="exam-desc">Relevo e Hidrografia do Brasil</p>
+          <p class="exam-sub">Realizada em 10/09</p>
+        </div>
+        <div class="exam-grade">
+          <p class="exam-grade-label">Nota</p>
+          <p class="exam-grade-value danger">5.0</p>
+        </div>
+      </div>
+
+      <div id="empty-realizadas" class="empty hidden">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSbaJjbzo5uzVby1mlih9qmRy4iqV6KbJrGKwG8Iw7YlWf0lTvWYXyqDNTyyfPgp2QE8iRSNvaDvfWgN4NHOwRreDAZIjTGsCjZcvoG3aUutrAQiP1ZChc3xxS_p02DWp3YumK89GvRucTFnP3KODY3FISWHMjf68unB1A1hAw-Cb6WaAqOiOwcA7uOcxiFwj4_oRGalv9YXvFh1AZAVZ-WxDm15BAGR2bDNRMSG-ynO-ql6PkVJlcQVwuCXeuLJEEAKB9Zd5S5nsS"
+             alt="Nenhuma prova realizada ainda" />
+        <p class="empty-title">Nenhuma prova realizada ainda</p>
+        <p class="empty-desc">Suas provas anteriores e notas aparecerão aqui.</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- Script externo -->
+  <script src="./../js/provas.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Prova Paraná</title>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="./../css/saeb.css.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-icon">
+                <span class="material-symbols-outlined" style="font-size: 1.5rem;">arrow_back</span>
+            </div>
+            <h2>Prova Paraná</h2>
+            <div class="header-actions">
+                <button class="icon-button">
+                    <span class="material-symbols-outlined" style="font-size: 1.5rem;">notifications</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="main-card">
+                <div class="main-card-image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAs9_w66-2OH-qyJPrZPUxh0rNUq18cZx14AEQMFepOReKc8skOWhucTT1ukSFrS2XM8PDyUPjPQQ3YKPwDRiS_bsrg5txYiSQaCEqUSCel5qDDJAGQDrxhvSqDf6_sVOcSCx8Q_i-F8Ynf-IdBk_WHGhP02AMCanINE4vV1PE5S-rWbf9TReEy0NVI6dW09GP1-TRzPI-D-CueeqLv2met2rI3CsRyXnIThQiYzBDW8LWz2F5fLiywdrGsQmY-Fh7Rx7ZGemLWHkX1");'></div>
+                <div class="main-card-content">
+                    <p class="main-card-title">Próxima Prova</p>
+                    <div class="main-card-info">
+                        <div class="main-card-details">
+                            <p class="text-secondary">25 de Outubro, 14:00</p>
+                            <p class="text-secondary">Português, Matemática, Ciências</p>
+                        </div>
+                        <button class="btn-primary">Ver Conteúdo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-container">
+            <div class="filter-tabs">
+                <label class="filter-tab">
+                    <span>Provas Agendadas</span>
+                    <input name="provas_filter" type="radio" value="Provas Agendadas"/>
+                </label>
+                <label class="filter-tab">
+                    <span>Provas Realizadas</span>
+                    <input checked name="provas_filter" type="radio" value="Provas Realizadas"/>
+                </label>
+            </div>
+        </div>
+
+        <div class="provas-list">
+            <div class="prova-item">
+                <div class="prova-left">
+                    <div class="prova-icon">
+                        <span class="material-symbols-outlined">menu_book</span>
+                    </div>
+                    <div class="prova-info">
+                        <p class="prova-title">Prova Paraná - 1º Bimestre</p>
+                        <p class="prova-date">Realizada em 15 de Março</p>
+                    </div>
+                </div>
+                <div class="prova-right">
+                    <div class="progress-bar">
+                        <div class="progress-fill emerald" style="width: 75%;"></div>
+                        <span class="progress-text">7.5/10</span>
+                    </div>
+                    <button class="btn-review">Revisar Conteúdo</button>
+                </div>
+            </div>
+
+            <div class="prova-item">
+                <div class="prova-left">
+                    <div class="prova-icon">
+                        <span class="material-symbols-outlined">science</span>
+                    </div>
+                    <div class="prova-info">
+                        <p class="prova-title">Prova Paraná - 2º Bimestre</p>
+                        <p class="prova-date">Realizada em 20 de Junho</p>
+                    </div>
+                </div>
+                <div class="prova-right">
+                    <div class="progress-bar">
+                        <div class="progress-fill amber" style="width: 60%;"></div>
+                        <span class="progress-text">6.0/10</span>
+                    </div>
+                    <button class="btn-review">Revisar Conteúdo</button>
+                </div>
+            </div>
+
+            <div class="prova-item">
+                <div class="prova-left">
+                    <div class="prova-icon">
+                        <span class="material-symbols-outlined">calculate</span>
+                    </div>
+                    <div class="prova-info">
+                        <p class="prova-title">Prova Paraná - 3º Bimestre</p>
+                        <p class="prova-date">Realizada em 12 de Setembro</p>
+                    </div>
+                </div>
+                <div class="prova-right">
+                    <div class="progress-bar">
+                        <div class="progress-fill red" style="width: 45%;"></div>
+                        <span class="progress-text">4.5/10</span>
+                    </div>
+                    <button class="btn-review">Revisar Conteúdo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  <script src="./../js/saeb.js"></script>
+
+</body>
+</html>

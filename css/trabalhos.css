@@ -1,0 +1,183 @@
+/* ---------- Geral ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Public Sans", sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+  min-height: 100vh;
+}
+
+:root {
+  --primary: #1173d4;
+  --background-light: #f6f7f8;
+  --background-dark: #101922;
+  --text-light: #0d141b;
+  --text-dark: #ffffff;
+  --gray: #777;
+}
+
+.light {
+  --background: var(--background-light);
+  --text: var(--text-light);
+}
+
+.dark {
+  --background: var(--background-dark);
+  --text: var(--text-dark);
+}
+
+/* ---------- Top Bar ---------- */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background);
+  border-bottom: 1px solid #ccc;
+  padding: 10px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.top-bar h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  flex: 1;
+}
+
+.icon, .notification-btn {
+  color: var(--text);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;
+}
+
+/* ---------- Tabs ---------- */
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #cfdbe7;
+  background-color: var(--background);
+  position: sticky;
+  top: 60px;
+  z-index: 9;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 12px 0;
+  font-weight: 600;
+  color: #777;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+
+.tab.active {
+  color: var(--primary);
+  border-bottom: 3px solid var(--primary);
+}
+
+/* ---------- Cards ---------- */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: background 0.3s;
+}
+
+.dark .card {
+  background-color: #1a2430;
+  color: var(--text-dark);
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.card-icon.blue { background-color: #3b82f6; }
+.card-icon.yellow { background-color: #facc15; }
+.card-icon.red { background-color: #ef4444; }
+
+.card-info {
+  flex: 1;
+  margin-left: 12px;
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.card-sub, .card-desc {
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+/* ---------- Botão "Ver Detalhes" ---------- */
+.btn-link {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ---------- Bottom Navigation ---------- */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  padding: 6px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.dark .bottom-nav {
+  background-color: #1a2430;
+  border-color: #333;
+}
+
+.bottom-nav a {
+  color: #777;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.75rem;
+}
+
+.bottom-nav a.active {
+  color: var(--primary);
+}

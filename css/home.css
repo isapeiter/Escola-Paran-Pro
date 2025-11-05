@@ -1,0 +1,175 @@
+:root {
+  --primary: #003366;
+  --secondary: #009639;
+  --bg-light: #ffffff;
+  --bg-dark: #101922;
+  --card-light: #f0f0f0;
+  --card-dark: #1a242e;
+  --text-primary: #333333;
+  --text-secondary: #ffffff;
+  --font-display: "Public Sans", sans-serif;
+}
+
+/* Modo escuro automático */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-light: var(--bg-dark);
+    --text-primary: var(--text-secondary);
+    --card-light: var(--card-dark);
+  }
+}
+
+body {
+  font-family: var(--font-display);
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 1rem;
+}
+
+.navbar h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  flex: 1;
+}
+
+.nav-icon, .nav-button {
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+
+/* Grid menu */
+.main-content {
+  padding: 1rem;
+}
+
+.grid-menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  background-color: var(--card-light);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+}
+
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  background-color: rgba(0, 51, 102, 0.15);
+  color: var(--primary);
+  border-radius: 50%;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card-icon {
+    background-color: rgba(0, 150, 57, 0.2);
+    color: var(--secondary);
+  }
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Notifications */
+.section-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 2rem 1rem 1rem;
+}
+
+.notifications {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0 1rem 2rem;
+}
+
+.notification {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--card-light);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  min-height: 72px;
+}
+
+.notif-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.notif-icon {
+  background-color: rgba(0, 150, 57, 0.2);
+  color: var(--secondary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+}
+
+.notif-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.notif-desc {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0.25rem 0 0;
+}
+
+.notif-time {
+  font-size: 0.875rem;
+  color: #999;
+}
+
+@media (prefers-color-scheme: dark) {
+  .notification {
+    background-color: var(--card-dark);
+  }
+  .notif-desc,
+  .notif-time {
+    color: #bbb;
+  }
+}

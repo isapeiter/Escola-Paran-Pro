@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Passeios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="./../css/passeios.css">
+    </head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-icon">
+                <span class="material-symbols-outlined" style="font-size: 1.5rem;">arrow_back</span>
+            </div>
+            <h2>Passeios</h2>
+            <div class="header-actions">
+                <button class="icon-button">
+                    <span class="material-symbols-outlined" style="font-size: 1.5rem;">calendar_month</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="todos">
+                <p>Todos</p>
+            </button>
+            <button class="filter-btn" data-filter="pendente">
+                <p>Pendente</p>
+            </button>
+            <button class="filter-btn" data-filter="enviada">
+                <p>Enviada</p>
+            </button>
+            <button class="filter-btn" data-filter="recusada">
+                <p>Recusada</p>
+            </button>
+        </div>
+
+        <div class="cards-container">
+            <div class="card" data-status="enviada">
+                <div class="card-left">
+                    <div class="card-icon">
+                        <span class="material-symbols-outlined" style="font-size: 1.5rem;">account_balance</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-title">Visita ao Museu de Arte</p>
+                        <p class="card-subtitle">Museu de Arte, Rua Principal, nº 123</p>
+                        <p class="card-subtitle">15 de Outubro, 09:00 - 12:00</p>
+                    </div>
+                </div>
+                <div class="card-right">
+                    <div class="status-indicator">
+                        <div class="status-dot green"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-status="pendente">
+                <div class="card-left">
+                    <div class="card-icon">
+                        <span class="material-symbols-outlined" style="font-size: 1.5rem;">park</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-title">Excursão ao Parque Estadual</p>
+                        <p class="card-subtitle">Parque Estadual, Rodovia Principal, km 50</p>
+                        <p class="card-subtitle">22 de Outubro, 08:00 - 17:00</p>
+                    </div>
+                </div>
+                <div class="card-right">
+                    <div class="status-indicator">
+                        <div class="status-dot yellow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-status="recusada">
+                <div class="card-left">
+                    <div class="card-icon">
+                        <span class="material-symbols-outlined" style="font-size: 1.5rem;">beach_access</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-title">Dia de Desporto na Praia</p>
+                        <p class="card-subtitle">Praia Central, Av. Beira Mar</p>
+                        <p class="card-subtitle">5 de Novembro, 10:00 - 16:00</p>
+                    </div>
+                </div>
+                <div class="card-right">
+                    <div class="status-indicator">
+                        <div class="status-dot red"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-status="enviada">
+                <div class="card-left">
+                    <div class="card-icon">
+                        <span class="material-symbols-outlined" style="font-size: 1.5rem;">theater_comedy</span>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-title">Peça de Teatro</p>
+                        <p class="card-subtitle">Teatro Municipal, Praça da Cultura</p>
+                        <p class="card-subtitle">12 de Novembro, 19:00 - 21:00</p>
+                    </div>
+                </div>
+                <div class="card-right">
+                    <div class="status-indicator">
+                        <div class="status-dot green"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="fab" onclick="alert('Adicionar novo passeio')">
+            <span class="material-symbols-outlined" style="font-size: 1.875rem;">add</span>
+        </button>
+    </div>
+    <script src="./../js/passeios.js"></script>
+    </body>
+</html>
