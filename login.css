@@ -1,164 +1,201 @@
-:root {
-  --primary: #003366;
-  --secondary: #FFD700;
-  --bg-light: #F5F5F5;
-  --text-light: #333333;
-  --font-display: 'Public Sans', sans-serif;
-}
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: var(--font-display);
-  background-color: var(--bg-light);
-  color: var(--text-light);
-  min-height: 100vh;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    :root {
+      --primary: #003366;
+      --secondary: #FFD700;
+      --bg-light: #F5F5F5;
+      --text-light: #333333;
+      --font-display: 'Public Sans', sans-serif;
+    }
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  width: 100%;
-}
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
 
-.login-box {
-  width: 100%;
-  max-width: 400px;
-  background: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
-}
+    body {
+      font-family: var(--font-display);
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.logo img {
-  width: 150px;
-  margin-bottom: 1rem;
-}
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      width: 100%;
+    }
 
-h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
+    .login-box {
+      width: 100%;
+      max-width: 400px;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
 
-p {
-  font-size: 1rem;
-  color: #555;
-}
+    .logo img {
+      width: 150px;
+      margin-bottom: 1rem;
+    }
 
-.form {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+    .text-center {
+      margin-bottom: 1.5rem;
+    }
 
-label p {
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  text-align: left;
-}
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--text-light);
+    }
 
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  padding: 0.9rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  outline: none;
-}
+    p {
+      font-size: 1rem;
+      color: #555;
+    }
 
-input:focus {
-  border-color: var(--primary);
-}
+    .form {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
 
-.password-field {
-  display: flex;
-  align-items: center;
-}
+    .form label {
+      display: block;
+      text-align: left;
+    }
 
-.password-field input {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-right: none;
-}
+    label p {
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      text-align: left;
+      color: var(--text-light);
+    }
 
-.password-field button {
-  background: #fff;
-  border: 1px solid #ccc;
-  border-left: none;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  cursor: pointer;
-  padding: 0 1rem;
-  color: #666;
-}
+    input[type="email"] {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      font-family: var(--font-display);
+    }
 
-.password-field button:hover {
-  background: #f0f0f0;
-}
+    input:focus {
+      border-color: var(--primary);
+    }
 
-.links {
-  text-align: left;
-}
+    .password-field {
+      position: relative;
+      display: flex;
+      align-items: stretch;
+    }
 
-.links a {
-  font-size: 0.9rem;
-  color: var(--primary);
-  text-decoration: none;
-}
+    .password-field input {
+      width: 100%;
+      padding: 0.9rem 3rem 0.9rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      font-family: var(--font-display);
+    }
 
-.links a:hover {
-  text-decoration: underline;
-}
+    .password-field input:focus {
+      border-color: var(--primary);
+    }
 
-.btn-primary,
-.btn-secondary {
-  width: 100%;
-  padding: 1rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.2s;
-}
+    .password-field button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0 0.75rem;
+      color: #666;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s;
+    }
 
-.btn-primary {
-  background: var(--primary);
-  color: white;
-}
+    .password-field button:hover {
+      color: var(--primary);
+    }
 
-.btn-primary:hover {
-  background: #002850;
-}
+    .links {
+      text-align: left;
+      margin-top: -0.5rem;
+    }
 
-.btn-secondary {
-  background: var(--secondary);
-  color: var(--primary);
-}
+    .links a {
+      font-size: 0.9rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
 
-.btn-secondary:hover {
-  background: #e6c400;
-}
+    .links a:hover {
+      text-decoration: underline;
+    }
 
-.help {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: #777;
-}
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.2s;
+      font-family: var(--font-display);
+    }
 
-.help a {
-  color: var(--primary);
-  text-decoration: none;
-}
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
 
-.help a:hover {
-  text-decoration: underline;
-}
+    .btn-primary:hover {
+      background: #002850;
+    }
+
+    .btn-secondary {
+      background: var(--secondary);
+      color: var(--primary);
+    }
+
+    .btn-secondary:hover {
+      background: #e6c400;
+    }
+
+    .help {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    .help a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .help a:hover {
+      text-decoration: underline;
+    }
