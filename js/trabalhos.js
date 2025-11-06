@@ -1,11 +1,21 @@
-// Alterna automaticamente o modo claro/escuro baseado nas preferências do sistema
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
-const html = document.documentElement;
+  // Dark mode automático
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.classList.add('dark-mode');
+    }
 
-function setTheme() {
-  html.classList.toggle("dark", prefersDark.matches);
-  html.classList.toggle("light", !prefersDark.matches);
-}
+    // Filtro de cartões
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
 
-prefersDark.addEventListener("change", setTheme);
-setTheme();
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        const filter = button.dataset.filter;
+
+        cards.forEach(card => {
+          card.style.display =
+            filter === 'todos' || card.dataset.status === filter ? 'flex' : 'none';
+        });
+      });
+    });

@@ -2,22 +2,11 @@
   --primary: #003366;
   --secondary: #f0f2f5;
   --bg-light: #f6f7f8;
-  --bg-dark: #101922;
   --text-main: #333;
   --text-secondary: #666;
   --success: #28a745;
   --danger: #dc3545;
   --font-display: "Public Sans", sans-serif;
-}
-
-/* Dark mode automático */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-light: var(--bg-dark);
-    --text-main: #fff;
-    --text-secondary: #aaa;
-    --secondary: #1e293b;
-  }
 }
 
 body {
@@ -67,6 +56,11 @@ body {
   border-radius: 0.5rem;
   padding: 0.25rem;
   gap: 0.25rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .tab {
@@ -89,6 +83,7 @@ body {
   font-size: 0.9rem;
   color: var(--text-secondary);
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .tab input:checked + span {
@@ -130,6 +125,7 @@ body {
   justify-content: center;
   width: 48px;
   height: 48px;
+  flex-shrink: 0;
 }
 
 .exam-info {
@@ -217,4 +213,74 @@ body {
   font-size: 0.9rem;
   color: var(--text-secondary);
   max-width: 240px;
+}
+
+/* 📱 RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .exam-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .exam-meta {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+
+  .exam-date {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar h2 {
+    font-size: 1rem;
+  }
+
+  .exam-card {
+    padding: 0.75rem;
+  }
+
+  .exam-title {
+    font-size: 0.9rem;
+  }
+
+  .exam-desc {
+    font-size: 0.8rem;
+  }
+
+  .exam-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tabs {
+    margin: 0 0.5rem;
+  }
+
+  .tab span {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .topbar h2 {
+    font-size: 0.9rem;
+  }
+
+  .exam-title {
+    font-size: 0.85rem;
+  }
+
+  .exam-desc {
+    font-size: 0.75rem;
+  }
+
+  .exam-card {
+    gap: 0.75rem;
+  }
 }
